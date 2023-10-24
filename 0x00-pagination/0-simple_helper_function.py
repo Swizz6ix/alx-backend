@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 a script named that defines a function
-takes two integer arguments page and page_size.
+which takes two integer arguments page and page_size.
 """
 from typing import Tuple
 

@@ -39,10 +39,10 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         pass
-    
+
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
-        mplement a method named get_page that takes two integer arguments
+        Implement a method named get_page that takes two integer arguments
         page with default value 1 and page_size with default value 10.
         """
         assert isinstance(page, int) and isinstance(page_size, int)

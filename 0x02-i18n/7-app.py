@@ -72,7 +72,7 @@ def get_locale():
 @babel.timezoneselector
 def get_timezone():
     """
-    
+    Select and return the appropriate time zine
     """
     tzone = request.args.get('timezone', None)
     if tzone:

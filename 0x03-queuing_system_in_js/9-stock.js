@@ -83,6 +83,13 @@ app.get('/reserve_product/:itemId', async (req, res) => {
   };
 })
 
+const resetProductStock = () => {
+  return Promise.all(
+    listProducts.map(item => promisify(redisClient.SET).bind(redisClient)(`item.${item.itemId}`, 0))
+  )
+}
+
 app.listen(PORT, () => {
+  resetProductStock();
   console.log(`app listening at http://localhost:${PORT}`);
 });
